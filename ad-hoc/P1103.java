@@ -8,8 +8,6 @@ public class P1103 {
 
         Scanner sc = new Scanner (System.in);        
 
-        int resultado = 1;
-
         while (true){
             int H1 = sc.nextInt();
             int M1 = sc.nextInt();
@@ -23,11 +21,14 @@ public class P1103 {
                 break;
             }  
 
-            if (((H2*60)+M2)>=((H1*60)+M1)){
-                System.out.println(((H2*60)+M2)-((H1*60)+M1));
+            int hora1 = (H1*60)+M1;
+            int hora2 = (H2*60)+M2;
+
+            if (hora2 >= hora1){
+                System.out.println(hora2-hora1);
             } 
             else { 
-                System.out.println(((H2*60)+M2)-((H1*60)+M1)+1440);
+                System.out.println(hora2-hora1+1440);
             }
            
         }
