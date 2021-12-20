@@ -21,8 +21,8 @@ public class P1103 {
                 break;
             }  
 
-            int hora1 = (H1*60)+M1;
-            int hora2 = (H2*60)+M2;
+            int hora1 = getHora(H1, M1);
+            int hora2 = getHora(H2, M2);
 
             if (hora2 >= hora1){
                 System.out.println(hora2-hora1);
@@ -34,5 +34,9 @@ public class P1103 {
         }
 
     }
- 
+
+    private static int getHora(int H, int M) {
+        return (H * 60) + M;
+    }
+
 }

@@ -5,7 +5,7 @@ public class P1329 {
  
     public static void main (String[] args) throws IOException {
 
-        Scanner sc = new Scanner (System.in);        
+        Scanner sc = new Scanner (System.in);
 
         while (true){
             int N = sc.nextInt();         
@@ -14,10 +14,10 @@ public class P1329 {
 
             }  
 
-            // declarando um contador para mary e para jhon
+            // declarando um contador para mary e para jhon e inicializando com valor 0
             int mary = 0;
             int jhon = 0;
-            //loop de N vezes
+            //loop de N/2 vezes
             for (int i = 0; i < N; i++){
 
                 //lendo a entrada
