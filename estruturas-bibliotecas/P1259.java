@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class P1259 {
 
@@ -10,24 +11,35 @@ public class P1259 {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        ArrayList<Integer> lista = new ArrayList<>();
+        ArrayList<Integer> pares = new ArrayList<>();
+        ArrayList<Integer> impares = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
 
             int resultado = sc.nextInt();
-            lista.add(resultado);
 
+            if (resultado %2 == 0) {
+                pares.add(resultado);
+            }
 
-//            ArrayList<int> pares = new ArrayList<>();
-//            pares.add(resultado);
-//
-//            ArrayList<int> impares = new ArrayList<>();
-//            impares.add(resultado);
+            else { 
+                impares.add(resultado);
+
+            }
 
         }
 
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.println(lista.get(i));
+        Collections.sort(pares);
+        Collections.sort(impares, Collections.reverseOrder());
+
+
+        for (int i = 0; i < pares.size(); i++) {
+            System.out.println(pares.get(i));
+
+        }
+
+        for (int i = 0; i < impares.size(); i++) {
+            System.out.println(impares.get(i));
 
         }
 
